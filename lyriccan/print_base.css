@@ -1,0 +1,1027 @@
+/***************************************************************
+ *                                                             *
+ * @author Juergen Schley <j.schley(at)21torr.com>             *
+ * @copyright 2010 -- Phonak Lyric                             *
+ * @date 2010/09                                               *
+ * @version 1.0                                                *
+ * @lastmodified 2010/09/06                                    *
+ * @section print page                                         *
+ *                                                             *
+ **************************************************************/
+
+* {
+	margin:0;
+	padding:0;
+}
+
+div.clear, br.clear {
+  clear:both;
+  height:1px;
+  font-size:1px;
+  line-height:1px;
+}
+
+div.clearZero {
+  clear:both;
+  font-size:0;
+}
+
+br.clear { clear:left; }
+
+:focus { -moz-outline-style:none; }
+
+a:focus {
+  outline:0;
+  -moz-outline:0;
+}
+
+h3 { font-size:1em; }
+
+div.right { float:right; }
+
+img { border:0 none; }
+
+
+/***************************************************************
+ *                                                             *
+ * @section page                                               *
+ *                                                             *
+ **************************************************************/
+
+html, body {
+  margin:0;
+  padding:0;
+  background: #c7c0b9 url(../img/bg.main.jpg) center top no-repeat;
+  font-family:Arial,Verdana;
+  font-size:95%;
+  color:#1a1a1a;
+  height:100%;
+}
+
+html,body,#zoom-left,#zoom-left table,#zoom-left td,#zoom-right,#zoom-right table,#zoom-right td {
+	width:100%;
+	overflow:hidden;
+}
+
+#header {
+  position:absolute;
+  width:100%;
+  height:91px;
+  background: url(../img/bg.header.png) repeat-x;
+  z-index:4;
+}
+
+#logo { float:right; }
+
+
+#footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:35px;
+  z-index:20;
+  background: url(../img/bg.footer.png) repeat-x;
+}
+
+
+#life-is-on {
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  z-index:21;
+}
+
+
+/***************************************************************
+ *                                                             *
+ * @section navigation                                         *
+ *                                                             *
+ **************************************************************/
+
+
+/***************************************************************
+ *                                                             *
+ * @note Main-Navigation Styles                                *
+ *                                                             *
+ **************************************************************/
+
+#main-nav {
+  float:left;
+  width:565px;
+}
+
+#main-nav ul {
+  float:right;
+  width:545px;
+  height:20px;
+  list-style:none;
+  margin:48px 0 0 21px;
+}
+
+#main-nav ul li {
+  display:inline;
+}
+
+#main-nav ul a {
+  display:block;
+  float:left;
+  height:20px;
+  margin-right:38px;
+  background-repeat:no-repeat;
+  text-decoration:none;
+  text-indent:-999px;
+  overflow:hidden;
+}
+
+#main-nav ul a.active  { background-position:0 -20px !important; }
+
+#main-nav ul #mn1 a { width:38px;background:url(../nav/de.mn1.png); }
+#main-nav ul #mn2 a { width:93px;background:url(../nav/de.mn2.png); }
+#main-nav ul #mn3 a { width:87px;background:url(../nav/de.mn3.png); }
+#main-nav ul #mn4 a { width:81px;background:url(../nav/de.mn4.png); }
+#main-nav ul #mn5 a { width:50px;background:url(../nav/de.mn5.png); }
+
+
+
+/***************************************************************
+ *                                                             *
+ * @note Footer-Navigation Styles                              *
+ *                                                             *
+ **************************************************************/
+
+
+#footer-nav {
+  float:left;
+  width:59%;
+}
+
+#footer-nav ul {
+  float:left;
+  width:640px;
+  height:16px;
+  list-style:none;
+  margin:13px 0 0 5px;
+}
+
+#footer-nav ul li { display:inline; }
+
+#footer-nav ul a {
+  display:block;
+  float:left;
+  height:16px;
+  margin-right:1px;
+  background-repeat:no-repeat;
+  text-decoration:none;
+  text-indent:-999px;
+  overflow:hidden;
+}
+
+#footer-nav ul a.active  { background-position:0 -16px !important; }
+
+#footer-nav ul #fn1 a { width:156px;background:url(../nav/de.fn1.png); }
+#footer-nav ul #fn2 a { width:94px;background:url(../nav/de.fn2.png); }
+#footer-nav ul #fn3 a { width:40px;background:url(../nav/de.fn3.png); }
+#footer-nav ul #fn4 a { width:66px;background:url(../nav/de.fn4.png); }
+#footer-nav ul #fn5 a { width:116px;background:url(../nav/de.fn5.png); }
+
+
+/***************************************************************
+ *                                                             *
+ * @note Footer-Navigation Styles                              *
+ *                                                             *
+ **************************************************************/
+
+#language-nav {
+  float:left;
+  width:29%;
+  margin-left:11%;
+}
+
+#language-nav ul {
+  float:left;
+  height:16px;
+  list-style:none;
+  margin:13px 0 0 0;
+}
+
+#language-nav ul li { display:inline; }
+
+#language-nav ul li a {
+  display:block;
+  float:left;
+  height:16px;
+  margin-right:1px;
+  background-repeat:no-repeat;
+  text-decoration:none;
+  text-indent:-999px;
+  overflow:hidden;
+}
+
+#language-nav ul li a.active { background-position:0 -16px !important; }
+
+#language-nav ul #lang2 a { width:45px;background:url(../nav/lang.english.png); }
+#language-nav ul #lang3 a { width:48px;background:url(../nav/lang.francais.png); }
+
+
+
+/***************************************************************
+ *                                                             *
+ * @note Footer-Trenner                                        *
+ *                                                             *
+ **************************************************************/
+
+
+#footer-nav ul li,
+#language-nav ul li { float:left;padding:0 14px; background:url(../nav/nav.trenner.gif) top right no-repeat; }
+
+#footer-nav ul li.last,
+#language-nav ul li.last { float:left;padding:0 14px; background:none; }
+
+
+
+/***************************************************************
+ *                                                             *
+ * @section content                                            *
+ *                                                             *
+ **************************************************************/
+
+
+#zoom-left div {
+	position:absolute;
+	width:150%;
+	height:150%;
+	top:8%;
+	left:-38%;
+  z-index:1;
+}
+
+#zoom-left img {
+	min-height:50%;
+	min-width:50%;
+	margin:0 auto;
+	display:block;
+}
+
+
+
+#zoom-right div {
+	position:absolute;
+	width:150%;
+	height:150%;
+	top:8%;
+	left:0;
+  z-index:2;
+}
+
+#zoom-right img {
+	min-height:50%;
+	min-width:50%;
+	margin:0 auto;
+	display:block;
+}
+
+
+
+#content {
+	position:absolute;
+  width:100%;
+  margin-top:91px;
+  z-index:10;
+}
+
+
+
+/***************************************************************
+ *                                                             *
+ * @note Homepage Styles                                       *
+ *                                                             *
+ **************************************************************/
+
+.sloganHome {
+  position:relative;
+  top:131px;
+  left:19%;
+  width:212px;
+}
+
+.rightHome {
+  position:relative;
+  float:right;
+  top:-109px;
+  right:55px;
+  width:450px;
+}
+
+.rightHome a { float:left; }
+
+.rightHome a.top { margin-bottom:26px; }
+
+.rightHome a.right { margin:0 0 24px 63px; }
+
+.rightHome h3.home {
+  text-indent:118px;
+  font-weight:normal;
+  line-height:1.5em;
+  margin-right:5px;
+  float:left;
+  width:auto;
+}
+
+.rightHome a.infosFacebook {
+  background: url(../img/link.facebook.home.png) right 0 no-repeat;
+  padding-right: 98px;
+  text-decoration:none;
+  color:#000;
+  font-size:1.1em;
+  margin-left:130px;
+}
+
+
+
+/***************************************************************
+ *                                                             *
+ * @note Was ist Lyric Styles                                  *
+ *                                                             *
+ **************************************************************/
+
+
+ /*** Brochure Styles ***/
+
+#brochure {
+  position:absolute;
+  top:100px;
+  width:449px;
+  float:left;
+  height:1%;
+}
+
+.getBrochure {
+  float:left;
+  width:97px;
+  height:35px;
+  background:#908271;
+  padding:11px 0 0 8px;
+}
+
+.getBrochure p {
+  width:68px;
+  float:left;
+  color:#fff;
+  font-size:.8em;
+  line-height:1em;
+  font-weight:bold;
+  display:block;
+}
+
+.getBrochure a {
+  float:left;
+  margin: 2px 0 0 1px;
+}
+
+.getBrochureForm {
+  float:left;
+  width:343px;
+  height:303px;
+  background:#fff url(../img/bg.get.brochure.jpg) top right no-repeat;
+}
+
+.getBrochureForm p {
+  width:185px;
+  margin:25px 0 14px 20px;
+}
+
+.getBrochureForm input {
+  float:left;
+  background:#eeecea;
+  color:#908271;
+  border:none;
+  width:180px;
+  height:23px;
+  font-family:arial;
+  padding:2px 5px 0 20px;
+  margin-bottom:5px;
+}
+*+html .getBrochureForm input { padding:7px 5px 0 20px; }
+* html .getBrochureForm input { padding:7px 5px 0 20px; }
+
+.getBrochureForm input.get {
+  background:none;
+  border:none;
+  height:44px;
+  width:134px;
+  margin-left:104px;
+  padding:0;
+}
+
+.getBrochureForm input.checkbox {
+  border:none;
+  background:#fff;
+  float:left;
+  width:auto;
+  padding:0;
+  margin:1px 8px 3px 20px;
+}
+
+.getBrochureForm p.checkbox {
+  float:left;
+  width:270px;
+  margin:3px 0 17px 5px;
+}
+
+
+/*** Fountain Styles ***/
+
+#fountain {
+  position:absolute;
+  background:url(../img/hand.png) no-repeat;
+  top:160px;
+  left:50%;
+  margin-left:-185px;
+  width: 538px;
+  height: 950px;
+}
+
+.finger-txt {
+  position:absolute;
+  left:50%;
+}
+
+.finger-txt h3 {
+  float:left;
+  font-size:1.5em;
+  color:#0d0d0d;
+  font-weight:normal;
+}
+
+.finger-txt a {
+  float:right;
+  margin-top:4px;
+}
+
+.finger-txt p {
+  float:left;
+  font-size:.5em;
+  color:#0d0d0d;
+  margin-top:4px;
+  width:100%;
+}
+*+html .finger-txt p { font-size:.6em; }
+* html .finger-txt p { font-size:.6em; }
+
+.finger-txt p.norm { font-size:1em; }
+
+.lay1 {
+  top:484px;
+  width:177px;
+  margin-left:-320px;
+}
+
+.lay2 {
+  top:315px;
+  width:145px;
+  margin-left:-340px;
+}
+
+.lay3 {
+  top:150px;
+  width:195px;
+  margin-left:-290px;
+}
+
+.lay4 {
+  top:150px;
+  width:205px;
+  margin-left:90px;
+}
+
+.lay5 {
+  top:305px;
+  width:260px;
+  margin-left:200px;
+}
+
+.lay6 {
+  top:463px;
+  width:235px;
+  margin-left:156px;
+}
+
+.lay4 a,
+.lay5 a,
+.lay6 a { float:left; }
+
+.lay4 h3,
+.lay5 h3,
+.lay6 h3 { float:right; }
+
+.lay4 p,
+.lay5 p,
+.lay6 p { padding-left:27px; }
+
+.lay5 a.img { margin-left:10px; }
+
+
+/***************************************************************
+ *                                                             *
+ * @note Sub Styles  Lyric                                     *
+ *                                                             *
+ **************************************************************/
+
+
+h3.subLyric {
+  font-size:2.4em;
+  font-weight:normal;
+  margin:25px 0 18px 34px;
+}
+
+p.subLyric {
+  width:365px;
+  margin:0 0 0 34px;
+  line-height:1.4em;
+}
+
+.subBack {
+  background: url(../img/bg.sub.stitch.png) 112px 12px no-repeat;
+  position:absolute;
+  bottom:30px;
+  width:342px;
+  height:186px;
+  left:40px;
+  z-index:20;
+}
+
+.subBack a {
+  color:#584d3f;
+  text-decoration:none;
+}
+
+.subBack a.back {
+  float:left;
+  background: url(../img/icon.sub.back.png) right 1px no-repeat;
+  width:105px;
+  line-height:2.5em;
+}
+
+.subBack a.facebook {
+  float:right;
+  background: url(../img/icon.sub.facebook.blue.png) no-repeat;
+  width:65px;
+  padding-left:40px;
+  margin-top:50px;
+}
+
+
+.contBack {
+  float:left;
+  background: url(../img/bg.cont.back.png) left bottom no-repeat;
+  width:142px;
+  height:160px;
+}
+
+.contBack a {
+  color:#584d3f;
+  text-decoration:none;
+  background: url(../img/icon.sub.back.png) top no-repeat;
+  margin:32px 0 0 40px;
+  padding-top:40px;
+  position:absolute;
+}
+
+
+.contTxt {
+  float:left;
+  width:65%;
+}
+
+.contTxt h3 {
+  font-size:2.4em;
+  font-weight:normal;
+  margin-top:25px;
+}
+
+.contTxt h4 {
+  font-size:1.4em;
+  font-weight:normal;
+  margin:12px 0 7px 0;
+}
+
+.contTxt p {
+  line-height:1.4em;
+  margin-bottom:35px;
+}
+
+
+.contMarg {
+  float:right;
+  width:15%;
+}
+
+.contMarg a {
+  float:left;
+  color:#584d3f;
+  text-decoration:none;
+  background: url(../img/arrow.grey.double.right.png) no-repeat;
+  margin:25px 0 35px 0;
+  padding-left:30px;
+  width:120px;
+}
+
+
+/***************************************************************
+ *                                                             *
+ * @note Near You Styles                                       *
+ *                                                             *
+ **************************************************************/
+
+.nearyou { }
+
+.nearyou h3 {
+  font-size:2.4em;
+  font-weight:normal;
+  margin:25px 0 18px 34px;
+}
+
+.nearyou p {
+  width:365px;
+  margin:0 0 0 34px;
+  line-height:1.4em;
+}
+
+.nearyou span {
+  font-size:1.6em;
+}
+
+.nearyou a.infosFacebook {
+  background: url(../img/link.facebook.home.png) right 0px no-repeat;
+  padding-right: 98px;
+  text-decoration:none;
+  color:#000;
+  font-size:1.2em;
+  line-height:1.6em;
+}
+
+.nearyou table {
+  float:left;
+  margin-top:11px;
+}
+
+.nearyou table td {
+  padding-bottom:30px;
+  vertical-align:top;
+}
+
+.nearyou table td.first {
+  width:67px;
+}
+
+.nearyou table td.middle {
+  width:387px;
+  padding-left:5px;
+}
+
+.nearyou form {
+  width:321px;
+  margin-left:-2px;
+}
+
+.nearyou input {
+  float:left;
+  background:#f6f5f3;
+  color:#000;
+  border:none;
+  width:300px;
+  height:25px;
+  font-family:arial;
+  padding:2px 5px 0 13px;
+  margin:0 0 1px 3px;
+}
+*+html .nearyou input { padding:7px 5px 0 13px; }
+* html .nearyou input { padding:7px 5px 0 13px; }
+
+.nearyou input.small {
+  float:left;
+  width:230px;
+}
+
+.nearyou input.num {
+  float:left;
+  width:49px;
+}
+
+.nearyou input.send {
+  float:right;
+  background:none;
+  border:none;
+  height:44px;
+  width:149px;
+  margin-top:10px;
+  padding:0;
+}
+
+
+/***************************************************************
+ *                                                             *
+ * @note Tell Friends Styles                                   *
+ *                                                             *
+ **************************************************************/
+
+#tellTxt {
+  float:left;
+  width:360px;
+}
+
+#tellTxt h3 {
+  font-size:2.4em;
+  font-weight:normal;
+  margin:25px 0 18px 34px;
+}
+
+#tellTxt p {
+  width:365px;
+  margin:0 0 0 34px;
+  line-height:1.4em;
+}
+
+#tellTxt a.back {
+  float:left;
+  background: url(../img/arrow.grey.double.left.png) no-repeat;
+  padding-left:30px;
+  margin:20px 0 0 30px;
+  text-decoration:none;
+  color:#000;
+  font-weight:bold;
+  line-height:1.7em;
+}
+
+
+#step1 {
+  float:right;
+  margin-top:74px;
+  background: url(../img/bg.tell1.png) 0 25px no-repeat;
+  width: 599px;
+  height: 464px;
+  text-align:right;
+}
+
+#step1 #nav {
+  float:right;
+  width: 579px;
+  text-align:left;
+  margin-top:10px;
+}
+
+#step1 #nav a { margin:0 13px 0 21px; }
+
+#step1 #text {
+  background: url(../img/stitch.tell1.png) 95px 0 no-repeat;
+  position:absolute;
+  right:0;
+  top:365px;
+  width: 775px;
+  height: 145px;
+  text-align:left;
+  color:#584d3f;
+}
+
+#step1 #text p {
+  float:left;
+  margin-top:60px;
+  font-size:.9em;
+}
+
+#step1 #text p span { font-size:1.3em; }
+
+#step1 #text a.back {
+  float:left;
+  margin:58px 0 0 66px;
+}
+
+#step1 #text a.next {
+  float:left;
+  margin:58px 0 0 33px;
+}
+
+#step1 #text a.btn {
+  float:left;
+  margin:20px 0 0 200px;
+}
+
+#step1 #text a.facebook {
+  float:left;
+  background: url(../img/icon.sub.facebook.blue.png) no-repeat;
+  width:65px;
+  padding-left:35px;
+  margin:45px 0 0 200px;
+  text-decoration:none;
+  color:#584d3f;
+  font-size:1em;
+}
+
+
+
+#step2 {
+  float:right;
+  margin-top:74px;
+  padding-top:56px;
+  background: url(../img/bg.tell2.png) 0 25px no-repeat;
+  width: 599px;
+  height: 384px;
+  color:#584d3f;
+}
+
+#step2 #field1 {
+  float:left;
+  width: 255px;
+  margin-left:40px;
+}
+* html #step2 #field1 { width: 245px; }
+
+#step2 #field1 table {
+  float:left;
+  width: 232px;
+  margin:26px 0 5px 0;
+}
+
+#step2 #field1 table td { vertical-align:middle; }
+
+#step2 #field1 table td.first { width:42px; }
+
+#step2 #field1 table td.last {
+  width:42px;
+  text-align:right;
+}
+
+#step2 #field1 p {
+  width:232px;
+  text-align:center;
+}
+
+#step2 #field2 {
+  float:left;
+  width: 275px;
+  text-align:right;
+}
+* html #step2 #field2 { width: 265px; }
+
+#step2 input {
+  float:left;
+  background:#e9e6e2;
+  color:#584d3f;
+  border:none;
+  width:215px;
+  height:25px;
+  font-family:arial;
+  padding:2px 5px 0 13px;
+  margin-bottom:5px;
+}
+*+html #step2 input { padding:7px 5px 0 13px;margin-left:-40px; }
+* html #step2 input { padding:7px 5px 0 13px;margin-left:-40px; }
+
+#step2 textarea {
+  float:left;
+  background:#e9e6e2;
+  color:#584d3f;
+  border:none;
+  width:253px;
+  height:250px;
+  font-family:arial;
+  font-size:.9em;
+  padding:7px 5px 0 13px;
+  margin:0 0 1px 3px;
+}
+* html #step2 textarea { width: 245px; }
+
+#step2 input.send {
+  float:right;
+  background:none;
+  border:none;
+  height:44px;
+  width:149px;
+  margin-top:10px;
+  padding:0;
+}
+
+#extra {
+  background: url(../img/stitch.tell2.png) top right no-repeat;
+  width: 208px;
+  height: 158px;
+  position:absolute;
+  right:557px;
+  top:275px;
+}
+
+#extra p {
+  float:left;
+  margin-top:95px;
+  font-size:.9em;
+  color:#584d3f;
+}
+
+#extra p span {
+  font-size:1.3em;
+  line-height:1.3em;
+}
+
+#extra p span.small {
+  font-size:.85em;
+  line-height:1.6em;
+  font-weight:bold;
+}
+
+
+
+
+#step3 {
+  float:right;
+  margin-top:74px;
+  background: url(../img/bg.tell3.png) 0 25px no-repeat;
+  width: 514px;
+  height: 464px;
+}
+
+#step3 #text {
+  background: url(../img/bg.tell3.txt.png) no-repeat;
+  width: 404px;
+  height: 390px;
+  margin-left:30px;
+  padding:68px 12px 0 12px;
+}
+
+#step3 #text p {
+  width:365px;
+  color:#3f3f3f;
+  font-size:1.3em;
+  margin:40px 0 0 20px;
+}
+
+#step3 #ok {
+  background: url(../img/icon.ok.png) no-repeat;
+  position:absolute;
+  right:30px;
+  top:255px;
+  width: 151px;
+  height: 167px;
+}
+
+
+
+
+/***************************************************************
+ *                                                             *
+ * @note Hoertest Styles                                       *
+ *                                                             *
+ **************************************************************/
+
+#hoertest {
+  background: url(../img/bg.hoertest.png) top center no-repeat;
+  margin-top:43px;
+  width: 100%;
+  height: 479px;
+  text-align:center;
+  padding:4px 0 0 16px;
+}
+
+
+
+
+
+
+/***************************************************************
+ *                                                             *
+ * @note overlay Styles                                        *
+ *                                                             *
+ **************************************************************/
+
+.vid_overlay {
+	display:none;
+	z-index:10000;
+	background-color:#fff;
+	width:514px;
+	min-height:250px;
+	padding:18px;
+	border:1px solid #666;
+	-moz-box-shadow:0 0 90px 5px #000;
+	-webkit-box-shadow: 0 0 90px #000;
+}
+
+.vid_overlay .close {
+	background-image:url(../img/icon.close.png);
+	position:absolute;
+	right:6px;
+	top:6px;
+	cursor:pointer;
+	height:21px;
+	width:21px;
+}
+
+.vid_overlay a.facebook {
+  float:right;
+  background: url(../img/icon.sub.facebook.blue.png) top right no-repeat;
+  width:500px;
+  padding-right:36px;
+  margin-top:11px;
+  color:#584d3f;
+  text-align:right;
+  text-decoration:none;
+  line-height:2em;
+}

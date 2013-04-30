@@ -1,0 +1,42 @@
+.tx-thmailformplus-pi1 {
+
+}
+
+div.mailformplus {
+
+}
+
+div.mailform_err_msg {
+  display: none;
+}
+
+.error_hidden {
+  display: none;
+}
+
+div#content .error {
+  color: #e42518;
+  display: block;
+	border:1px solid #C81414;
+}
+
+input.hidden_field {
+  display: none;
+}
+
+.scrollable {
+  position: relative;
+  overflow: hidden;
+  width: 578px;
+  height: 341px;
+	margin-bottom: 200px;
+}
+
+.scrollable .items {
+  width: 20000em;
+  position: absolute;
+}
+
+.items div {
+  float: left;
+}

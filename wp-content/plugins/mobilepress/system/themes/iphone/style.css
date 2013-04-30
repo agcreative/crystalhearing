@@ -1,0 +1,179 @@
+/*
+Theme Name: iPhone
+Theme URI: http://wordpress.org
+Description: The default MobilePress theme with special effects for the iPhone.
+Author: Aduity
+Author URI: http://aduity.com
+Version: 1.0
+Tags: mobile, mobilepress, light blue, grey, orange
+*/
+
+/* Simple Reset */
+
+body, html, div, span, h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote, form, input, fieldset { margin: 0; padding: 0;}
+
+img, fieldset { border: none; outline: none; }
+
+	img { height: auto; max-height: 300px; max-width: 300px; width: auto; }
+
+ul, ol { list-style: none; }
+
+a:link, a:visited { color: #065CA0; text-decoration: none; }
+
+/* General Styles */
+body { font-family: 'Arial'; font-size: 13px; }
+
+#header h1 { background: url(images/logo.jpg) center no-repeat; }
+
+#headerwrap, #footerwrap, 
+#nav-container { width: 100%; margin: 0 auto; }
+.mobile-nav { border-bottom: solid #edeeef 1px;  border-top: solid #edeeef 1px; background: #fefefe; }
+#headerwrap { position: fixed; top: 0; z-index: 9999999999; }
+#header { height: 50px; text-align: center;  background: #065ca0; }
+#header h1 a { display: block; height: 50px; text-indent: -5000px; }
+
+#menu-mobile-menu { width: 320px; margin: 0 auto; height: 40px; position: relative; }
+#menu-mobile-menu li li {
+    background: none repeat scroll 0 0 #CCCCCC;
+    width: 50%;
+}
+#menu-mobile-menu li.selected { background: #065CA0; color: #fff; }
+#menu-mobile-menu li.selected > a { color: #fff; }
+#menu-mobile-menu li {
+    float: left;
+    height: 40px;
+    text-align: center;
+    width: 80px;
+}
+#menu-mobile-menu li a { text-align: center; height: 40px; font-family: 'Arial'; font-style: italic; 
+text-decoration: none; line-height: 40px; display: block; color: #444; }
+#menu-mobile-menu ul.active { display: block; }
+#menu-mobile-menu ul { display: none; position: absolute; top: 40px; 
+width: 320px; left: 0; }
+
+#nav-container { background: #065ca0; padding: 10px; width: 300px; }
+#nav-container ul { width: 300px; height: 40px; margin: 0 auto; background: #fff; 
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+#nav-container ul li { float: left; }
+#nav-container ul li a{
+	height: 40px; line-height: 40px;
+	width: 96px;
+	display: block;
+	text-align: center;
+	text-indent: -55555px;
+}
+
+#nav-container li.home a { background: url("images/mobile-main-nav.jpg") no-repeat scroll -100px 5px; }
+#nav-container li.phone a { background: url("images/mobile-main-nav.jpg") no-repeat scroll 0 5px; }
+#nav-container li.mail a { background: url("images/mobile-main-nav.jpg") no-repeat scroll -204px 5px }
+
+#contentwrap { width: 280px; padding: 100px 20px 80px 20px; word-wrap: break-word; position: relative; margin: 0 auto;}
+
+#contentwrap h2, #contentwrap h3, #contentwrap p { margin-bottom: 10px; color: #000 !important; }
+#contentwrap ul { list-style: disc; margin-left: 20px; margin-bottom: 10px; }
+#contentwrap h2 { font-size: 16px; }
+#contentwrap p { font-size: 13px; }
+#footerwrap { clear: both; position: fixed; bottom: 0; background: #065ca0;  z-index: 999999; }
+#footer { background: #000; }
+#footer a { color: #fff; padding: 6px 30px; }
+
+#FA_slider_159 { position: relative; top: 0; left: -20px; overflow: hidden; min-width: 320px !important; max-width: 320px !important; margin: -8px auto !important; }
+.FA_overall_container_classic .FA_featured_articles .FA_article .FA_wrap { padding: 0 !important; }
+.FA_overall_container_classic .FA_featured_articles { height: 248px !important; }
+.FA_overall_container_classic .FA_featured_articles .FA_article .image_container { float: none !important; margin: 0 !important; padding: 0 !important; border: 0 !important; overflow: hidden !important; }
+
+#FA_slider_159 img { width: 568px !important; max-width: none !important; max-height: none !important; }
+.FA_overall_container_classic .FA_featured_articles .FA_article p, .FA_overall_container_classic .FA_featured_articles .FA_article a { padding: 0 !important; color: #333 !important; font-size: 10px !important; line-height: 14px !important;  margin-bottom: 3px !important; }
+.FA_overall_container_classic.dark .FA_featured_articles .FA_article h2 { background: none !important; margin-bottom: 3px !important; font-size: 11px !important; }
+#FA_slider_159 a { font-size; text-decoration: none; color: #000 !important; }
+#FA_slider_159 .caption { 
+	padding: 10px; background: #fff;	
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	position: relative;
+	z-index: 99999;
+	opacity: 0.7;
+	position: absolute;
+	bottom: 4px;
+}
+
+.FA_overall_container_classic.dark { background: none !important; border: 0 !important; }
+
+.mapp-canvas, .mapp-canvas-panel, .mapp-container { width: 280px !important; }
+.mapp-container { margin-bottom: 20px !important; }
+
+.products ul, ul.products {
+}
+div.product, #content div.product {
+
+}
+ul.products li.product h3 {
+	display: block;
+	text-align: center;
+}
+ul.products li.product {
+	width: 29.05% !important;
+	height: auto !important;
+	min-height: 170px !important;
+}
+
+ul.products li.last {
+   margin: 0 3.8% 2.992em 0 !important;
+}
+
+ul.products li.first {
+    clear: none !important;
+}
+
+#sidebar, .woocommerce_ordering {
+	display: none;
+}
+
+div.product div.images, #content div.product div.images {
+	width: 300px !important;
+	margin: 0 auto !important;	
+}
+div.product .woocommerce_tabs, #content div.product .woocommerce_tabs {
+	width: 300px !important;
+	padding: 10px !important;
+}
+
+div.product div.summary, #content div.product div.summary, .related, #breadcrumb, li.reviews_tab {
+	display: none !important;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+h1.product_title, h1.page-title {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+	font-size: 16px !important;
+}
+
+#tab-description h2 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+#content {
+	width: 320px;
+	padding: 90px 0 80px 0;
+	margin: 0 auto;
+}
+
+.product_gallery .slide-ctrl .ad-slideshow-stop-slide, .product_gallery .slide-ctrl .ad-slideshow-start-slide, .product_gallery .icon_zoom {
+	color: #99ccff !important;
+}
+
+.ad-gallery .lazy-load {
+	background: ##99ccff !important;
+}

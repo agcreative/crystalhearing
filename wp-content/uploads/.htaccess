@@ -1,0 +1,9 @@
+# disable php execution in uploads directory
+php_flag engine off
+
+# only allow certain files
+Order Allow,Deny
+Deny from all
+<Files ~ "\.(jpeg|jpg|png|gif|pdf)$">
+Allow from all
+</Files>
